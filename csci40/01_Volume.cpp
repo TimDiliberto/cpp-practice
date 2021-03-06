@@ -2,12 +2,10 @@
  * Program: Volume.cpp
  * Written by: Timothy Diliberto
  * Reads a radius from the user, prints the volume and surface area of a sphere
- * Last modified 12/06/2020
+ * Last modified 3/6/2021
  */
 
 #include <iostream>
-
-using namespace std;
 
 int main() {
 	const double PI = 3.14159;
@@ -15,14 +13,14 @@ int main() {
 	       volume,
 	       surfaceArea;
 
-	cout << "Enter radius of sphere: ";
-	cin >> radius;
+	std::cout << "Enter radius of sphere: ";
+	std::cin >> radius;
 
 	volume = 4.0 / 3.0 * PI * radius * radius * radius;
 	surfaceArea = 4.0 * PI * radius * radius;
 
-	cout << "Volume: " << volume << endl
-	     << "Surface Area: " << surfaceArea << endl;
+	std::cout << "Volume: " << volume
+	          << "\nSurface Area: " << surfaceArea << '\n';
 
 	return 0;
 }
