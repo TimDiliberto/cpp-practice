@@ -53,6 +53,16 @@ void printWSetAverage(int grades[][NUM_TESTS], double weights[]) {
 }
 
 void printUWTestAverage(int grades[][NUM_TESTS], double weights[]) {
-    std::cout << "---Called printUWTestAverage() successfully!---\n";
+    std::cout << "\n---Test Averages---\n";
+    for (int test = 0; test < NUM_TESTS; ++test) {
+	double sum = 0,
+	       average;
 
+        std::cout << "Test " << test + 1 << ": ";
+	for (int student = 0; student < NUM_STUDENTS; ++student) {
+	    sum += grades[student][test];
+	}
+        average = sum / NUM_STUDENTS;
+	std::cout << std::fixed << std::setprecision(1) << average << '\n';
+    }
 }
