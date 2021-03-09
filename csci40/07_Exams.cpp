@@ -4,7 +4,7 @@
  * Given the weights for exams, calculate and print the weighted average of
  *     each of ten sets of grades, as well as the unweighted average of each
  *     test
- * Last modified: 3/7/2021
+ * Last modified: 3/8/2021
  */
 
 #include <iostream>
