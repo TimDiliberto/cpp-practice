@@ -17,7 +17,7 @@ const double GAS_BASE = 31.0,     // therms
              ELEC_OVER = 0.133;
 
 //Function prototypes
-void calcCharges(double, double);
+void calcCharges(double, double, double, double, double);
 
 int main() {
     double startGas,
@@ -30,21 +30,25 @@ int main() {
     std::cin >> startGas;
     std::cout << "Ending Gas: ";
     std::cin >> endGas;
-    calcCharges(startGas, endGas);
+    calcCharges(startGas, endGas, GAS_BASE, GAS_UNDER, GAS_OVER);
 
     std::cout << "\nEnter starting and ending readings for electric meter\n"
               << "Starting Electric: ";
     std::cin >> startElec;
     std::cout << "Ending Electric: ";
     std::cin >> endElec;
-    calcCharges(startElec, endElec);
+    calcCharges(startElec, endElec, ELEC_BASE, ELEC_UNDER, ELEC_OVER);
 
     return 0;
 }
 
-void calcCharges(double start, double end) {
-    std::cout << "---Called calcCharges successfully!---\n"
-              << "Testing global constants: " << GAS_BASE << '\n'
-              << "Testing parameters: " << start << end << '\n'
-              << "Exiting function...\n";
+void calcCharges(double start, double end, double base,
+                 double underBase, double overBase) {
+    double usage = end - start,
+           cost;
+
+    if (usage <= base) cost = usage * underBase;
+    else cost = (base * underBase) + ((usage - base) * overBase);
+
+    std::cout << "Total Charges: " << cost << '\n';
 }
