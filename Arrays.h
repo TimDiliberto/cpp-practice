@@ -10,4 +10,10 @@
  */
 int linearSearch(int [], int, int);
 
+int binarySearch(int [], int, int);
+
+void bubbleSort(int [], int);
+
+void selectionSort(int [], int);
+
 #endif
