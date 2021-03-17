@@ -2,12 +2,12 @@
  * Includes numerous search and sort algorithms for built-in C++ arrays
  *     which can be used fluidly in other programs
  *
- * @file Arrays.cpp
+ * @file ArrayUtils.cpp
  * @author Timothy Diliberto
- * @version 2.0 3/14/2021
+ * @version 2.0.1 3/16/2021
  */
 
-#include "Arrays.h"
+#include "ArrayUtils.h"
 
 /**
  * Simple swaping function that trades positions of the two arguments

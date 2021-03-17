@@ -1,5 +1,5 @@
-#ifndef ARRAYS_H
-#define ARRAYS_H
+#ifndef ARRAYUTILS_H
+#define ARRAYUTILS_H
 
 /**
  * Sequentially searches through an array for a specified value
