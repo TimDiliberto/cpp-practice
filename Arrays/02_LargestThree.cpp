@@ -1,6 +1,6 @@
 /**
  * Given an array of integers, sorts using selection sort then outputs the
- *     largest element to the terminal
+ *     three largest element to the terminal
  *
  * @file 01_LargestElem.cpp
  * @author Timothy Diliberto
@@ -20,7 +20,9 @@ int main() {
 
     selectionSort(arr, SIZE);
 
-    std::cout << "Largest Element: " << arr[SIZE-1] << '\n';
+    std::cout << "1st Largest: " << arr[SIZE-1] << '\n';
+    std::cout << "2nd Largest: " << arr[SIZE-2] << '\n';
+    std::cout << "3rd Largest: " << arr[SIZE-3] << '\n';
 
     return 0;
 }
