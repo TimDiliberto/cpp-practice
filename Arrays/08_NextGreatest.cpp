@@ -10,7 +10,7 @@
 
 int main() {
     const int SIZE = 10;
-    int arr[SIZE] = { 3, 0, 3, 3, 4, 15, 27, 67, 17, 19 };
+    int arr[SIZE] = { 7, 0, 6, 3, 4, 15, 27, 67, 17, 19 };
     int greatest;
 
     for (int elem : arr) std::cout << elem << " "
